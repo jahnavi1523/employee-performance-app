@@ -9,8 +9,8 @@ function EmployeeList() {
   const fetchEmployees = async (dept = '') => {
     try {
       const url = dept
-        ? `https://employee-performance-backend.onrender.com/api/employees/search?department=${dept}`
-        : 'https://employee-performance-backend.onrender.com/api/employees';
+        ? `https://employee-performance-app-a6mj.onrender.com/api/employees/search?department=${dept}`
+        : 'https://employee-performance-app-a6mj.onrender.com/api/employees';
       const res = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -24,7 +24,7 @@ function EmployeeList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://employee-performance-backend.onrender.com/api/employees/${id}`, {
+      await axios.delete(`https://employee-performance-app-a6mj.onrender.com/api/employees/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchEmployees();

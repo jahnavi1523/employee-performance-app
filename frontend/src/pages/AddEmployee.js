@@ -19,7 +19,7 @@ function AddEmployee() {
         performanceScore: Number(form.performanceScore),
         experience: Number(form.experience)
       };
-      await axios.post('http://localhost:5000/api/employees', employeeData, {
+      await axios.post('https://employee-performance-app-a6mj.onrender.com/api/employees', employeeData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage('Employee added successfully!');

@@ -8,7 +8,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/employees', {
+        const res = await axios.get('https://employee-performance-app-a6mj.onrender.com/api/employees', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setEmployees(res.data);

@@ -11,7 +11,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://employee-performance-backend.onrender.com/api/auth/login', { email, password });
+      const res = await axios.post('https://employee-performance-app-a6mj.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard');
     } catch (err) {

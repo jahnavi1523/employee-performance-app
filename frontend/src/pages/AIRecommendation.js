@@ -11,7 +11,7 @@ function AIRecommendation() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/employees', {
+        const res = await axios.get('https://employee-performance-app-a6mj.onrender.com/api/employees', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setEmployees(res.data);
@@ -26,7 +26,7 @@ function AIRecommendation() {
     if (!selected) return;
     setLoading(true);
     try {
-      const res = await axios.post('https://employee-performance-backend.onrender.com/api/ai/recommend',
+      const res = await axios.post('https://employee-performance-app-a6mj.onrender.com/api/ai/recommend',
         { employee: selected },
         { headers: { Authorization: `Bearer ${token}` } }
       );
